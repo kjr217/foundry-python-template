@@ -3,9 +3,11 @@ pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
 import "../src/Counter.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
+import "openzeppelin-contracts/contracts/utils/Strings.sol";
 
 contract CounterTest is Test {
+    using Strings for uint256;
+
     Counter public counter;
     function setUp() public {
        counter = new Counter();
@@ -22,19 +24,21 @@ contract CounterTest is Test {
         assertEq(counter.number(), x);
     }
 
-    function testIncrementByInputFuzz(uint256 i) public {
+    function testIncrementByInputFFIFuzz(uint256 i) public {
         // run python script with same state that the solidity function will run
-        uint256 pyNumber = py_increment_by_input(counter.number(), i);
+        uint256 pyNumber = ffiPy(counter.number(), i);
         counter.incrementByInput(i);
         assertEq(counter.number(), pyNumber);
+        // to compare a difference (var1, var2, expected difference)
+        assertApproxEqAbs(counter.number(), pyNumber, 0);
     }
 
-    function py_increment_by_input(uint256 number, uint256 i) private returns (uint256) {
+    function ffiPy(uint256 number, uint256 i) private returns (uint256) {
         // compile a string input that represents the bash script to run the python script
         // increment the number in brackets when adding more input params
         // input 2 should be the location of the python script
         // each variable is made up of a pair of a tag "--tag" and a stringifed version of the variable
-        string[] memory inputs = new string[]();
+        string[] memory inputs = new string[](6);
         inputs[0] = "python3";
         inputs[1] = "python-scripts/counter.py";
         inputs[2] = "--number";
