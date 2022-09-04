@@ -11,4 +11,8 @@ contract Counter {
     function increment() public {
         number++;
     }
+
+    function incrementByInput(uint256 i) public {
+        number += i;
+    }
 }
