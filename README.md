@@ -1,6 +1,5 @@
 # Foundry <> Python Differential Fuzz Testing template
 
-![Foundry x Python](https://imgflip.com/i/6s7fyi)
 Foundry is a blazing fast testing environment for EVM smart contracts. Python is the leading programming language for quantitative analysis and data science. A lot of financial quant work gets modelled in Python and sometimes these models needs to be implemented in Solidity to be used in a protocol. 
 
 This template provides a reference implementation for creating foundry tests that compare solidity code to an implementation of the same code in Python. It does this by taking advantage of [foundry ffi](https://book.getfoundry.sh/forge/differential-ffi-testing?highlight=ffi#primer-the-ffi-cheatcode) and foundry's inbuilt fuzz tooling. Being able to compare python code against solidity code for correctness and differential analysis helps improve the security and reliability of quantitative solidity development and helps understand the limits of the EVM when it comes to developing quantitative models to be used on the EVM.
