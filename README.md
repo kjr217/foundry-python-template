@@ -13,11 +13,11 @@ Example implementations:
 
 ## Installation Instructions
 
-1. Make sure you have foundry installed, if you do not then follow the instructions here: https://book.getfoundry.sh/getting-started/installation#install-the-latest-release-by-using-foundryup
+1. Make sure you have foundry installed, if you do not then follow the instructions [here](https://book.getfoundry.sh/getting-started/).installation#install-the-latest-release-by-using-foundryup
 
-2. Make sure you have python3 installed, if you do not then follow the instructions here: https://www.python.org/downloads/ 
+2. Make sure you have python3 installed, if you do not then follow the instructions [here](https://www.python.org/downloads/).
 
-3. Make sure you have pipenv installed, if you do not then follow the instructions here: https://pipenv.pypa.io/en/latest/install/#isolated-installation-of-pipenv-with-pipx
+3. Make sure you have pipenv installed, if you do not then follow the instructions [here](https://pipenv.pypa.io/en/latest/install/).#isolated-installation-of-pipenv-with-pipx
 
 4. Run ```pipenv install``` to install python dependencies.
 
@@ -49,4 +49,3 @@ Run ```pipenv install <package-name>```
 ### How to change the targeted python script
 
 Change ```inputs[2]``` in the ```ffiPy``` function to represent the correct file path to the targeted script.
-
