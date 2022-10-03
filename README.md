@@ -9,7 +9,7 @@ Note: this template assumes some familiarity with foundry and forge, if you are 
 Example implementations:
 
 - [GDAs by FrankieIsLost](https://github.com/FrankieIsLost/gradual-dutch-auction/blob/master/src/test/ContinuousGDA.t.sol)
-- SABR by Rysk - to be opensourced soon (TBOSS ;)).
+- [SABR by Rysk](https://github.com/rysk-finance/dynamic-hedging/blob/rysk-alpha/packages/contracts/test/foundry/SABRVol.t.sol).
 
 ## Installation Instructions
 
