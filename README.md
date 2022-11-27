@@ -13,7 +13,7 @@ Example implementations:
 
 ## Installation Instructions
 
-1. Make sure you have foundry installed, if you do not then follow the instructions [here](https://book.getfoundry.sh/getting-started/.installation#install-the-latest-release-by-using-foundryup)
+1. Make sure you have foundry installed, if you do not then follow the instructions [here](https://book.getfoundry.sh/getting-started/installation)
 
 2. Make sure you have python3 installed, if you do not then follow the instructions [here](https://www.python.org/downloads/).
 
